@@ -12,6 +12,6 @@ public class Revista extends Obra{
 
     @Override
     public String getAsString() {
-        return  "    " + this.titulo + ": " + this.volume + " Nmr.: " + this.numero + " Ano: " + this.ano + " - " + this.organizacao;
+        return  "\tRevista: " + this.titulo + " - " + this.volume + " Nmr.: " + this.numero + " Ano: " + this.ano + " - " + this.organizacao;
     }
 }

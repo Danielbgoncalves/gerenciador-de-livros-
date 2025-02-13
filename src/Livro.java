@@ -7,6 +7,6 @@ public class Livro extends Obra{
     }
 
     public String getAsString(){
-        return "    " + this.autor + ": " + this.titulo + " - " + this.ano;
+        return "\tLivro: " + this.autor + " - " + this.titulo + " - " + this.ano;
     }
 }

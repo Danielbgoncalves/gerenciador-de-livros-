@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class PainelListagens extends JPanel {
     private JTextArea txtAreaListagens;
 
-    public PainelListagens(CardLayout cl, JPanel cards, String nomePainelPrinciapl){
+    public PainelListagens(CardLayout cl, JPanel cards){
         setLayout(new BorderLayout());
 
         txtAreaListagens = new JTextArea();
@@ -24,11 +24,10 @@ public class PainelListagens extends JPanel {
         txtAreaListagens.setText("");
         if(obras.isEmpty()){
             txtAreaListagens.append("""
-                    =====================================================
-                    \tNo momento não há obras listadas,
-                    \texperimente adicionar alguma
-                    =====================================================
-
+                    ===================================================================
+                    \t   No momento não há obras listadas,
+                    \t   experimente adicionar alguma
+                    ===================================================================
                     """);
         } else {
             for(Obra obra: obras){
