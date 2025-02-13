@@ -1,6 +1,6 @@
-# Gerenciador de Livros e Revistas
+# Gerenciador de Obras
 
-Este projeto utiliza a a interface gráfica Swing para tornar a interação mais amigável, nele é possível adicionar livros e revistas e uma lista de obras, bem como visualizar toda a lista com uma descrição unitária.
+Este projeto utiliza a a interface gráfica Swing para tornar a interação mais amigável, nele é possível adicionar livros, revistas e vídeos e uma lista de obras, bem como visualizar toda a lista com uma descrição unitária.
 
 # Funcionalidades
 - 📖 Cadastrar novas obras
