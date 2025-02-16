@@ -9,7 +9,7 @@ public class Video extends Obra{
     }
 
     public String getAsString(){
-        return  "\tVídeo: " +  this.titulo + " - " + this.autor + " - " + this.ano;
+        return  "\tVídeo: " +  this.titulo + " - " + this.autor + " - " + this.ano + " - " + this.duracao;
     }
 
 }

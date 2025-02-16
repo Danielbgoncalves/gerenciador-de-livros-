@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class PainelVideos extends JPanel{
+public class PainelVideos extends JPanel implements FunctionHelper{
     private ArrayList<Obra> listaObras;
     private JFrame mainFrame;
     private PainelListagens painelDeListagens;
@@ -38,14 +38,14 @@ public class PainelVideos extends JPanel{
         videoTitulo.setBounds(30,50, 70, 25);
         txtTitulo.setBounds(90, 50, 200, 25);
 
-        videoAno.setBounds(30,txtYPosition + 30, 70, txtHeight);
-        txtAno.setBounds(90, txtYPosition + 30, 200, 25);
+        videoAutor.setBounds(30,txtYPosition + 30, 70, txtHeight);
+        txtAutor.setBounds(90, txtYPosition + 30, 200, 25);
 
         videoDuracao.setBounds(30,txtYPosition + 60, 70, txtHeight);
         txtDuracao.setBounds(90, txtYPosition + 60, 80, 25);
 
-        videoAutor.setBounds(190,txtYPosition + 60, 70, txtHeight);
-        txtAutor.setBounds(240, txtYPosition + 60, 80, 25);
+        videoAno.setBounds(182,txtYPosition + 60, 70, txtHeight);
+        txtAno.setBounds(212, txtYPosition + 60, 80, 25);
 
         btnIncluir.setBounds(50, txtYPosition + 110, btnWidth, btnHeight);
         btnRevistas.setBounds(150, txtYPosition + 110, btnWidth, btnHeight);
@@ -81,15 +81,15 @@ public class PainelVideos extends JPanel{
         String duracao = txtDuracao.getText();
         String autor = txtAutor.getText();
 
-        if(!isNumeric(ano))
+        if(!FunctionHelper.isNumeric(ano))
         {
             JOptionPane.showMessageDialog(mainFrame,"O campo \"Ano\" ser numérico.");
         }
-        else if(!isHour(duracao))
+        else if(!FunctionHelper.isHour(duracao))
         {
             JOptionPane.showMessageDialog(mainFrame,"O campo \"Duração\" de ser do tipo horas:minutos.");
         }
-        else if(titulo.isEmpty() || autor.isEmpty() )
+        else if(titulo.isEmpty() || autor.isEmpty())
         {
             JOptionPane.showMessageDialog(mainFrame,"Não é permitido campo vazio.");
         }
@@ -107,11 +107,4 @@ public class PainelVideos extends JPanel{
     }
 
 
-    private boolean isNumeric(String str){
-        return str.matches("\\d+");
-    }
-
-    private boolean isHour(String str){
-        return str.matches("^\\d+:\\d+$");
-    }
 }

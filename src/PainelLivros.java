@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class PainelLivros extends JPanel {
+public class PainelLivros extends JPanel implements FunctionHelper{
     private ArrayList<Obra> listaObras;
     private JFrame mainFrame;
     private PainelListagens painelDeListagens;
@@ -70,7 +70,7 @@ public class PainelLivros extends JPanel {
         String titulo = txtTitulo.getText();
         String autor = txtAutor.getText();
         String ano = txtAno.getText();
-        if(!isNumeric(ano))
+        if(!FunctionHelper.isHour(ano))
         {
             JOptionPane.showMessageDialog(mainFrame,"O campo \"ano\" deve ser numérico");
         }
@@ -88,9 +88,5 @@ public class PainelLivros extends JPanel {
         {
             JOptionPane.showMessageDialog(mainFrame,"Não é permitido campo vazio.");
         }
-    }
-
-    private boolean isNumeric(String str){
-        return str.matches("\\d+");
     }
 }

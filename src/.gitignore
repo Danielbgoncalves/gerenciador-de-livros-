@@ -1,0 +1,5 @@
+# Ignorar as coisas bestas do Indelli J
+.idea/
+*.log
+*.class
+target/

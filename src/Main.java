@@ -12,12 +12,10 @@ public class Main {
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setSize(500, 250);
         mainFrame.setLayout(new BorderLayout());
-
-        Image icone = Toolkit.getDefaultToolkit().getImage("./assets/icon.png");
-        mainFrame.setIconImage(icone);
-
-        /// -------------- Cria painéis com CardLayout --------------
         JPanel cards = new JPanel(new CardLayout());
+
+        Image icone = Toolkit.getDefaultToolkit().getImage("assets/icon.png");
+        mainFrame.setIconImage(icone);
 
         /// -------------- Configuração dos cards --------------
         CardLayout cl = (CardLayout) cards.getLayout();

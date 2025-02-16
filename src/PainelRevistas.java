@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class PainelRevistas extends JPanel {
+public class PainelRevistas extends JPanel implements FunctionHelper {
     private ArrayList<Obra> listaObras;
     private JFrame mainFrame;
     private PainelListagens painelDeListagens;
@@ -85,12 +85,13 @@ public class PainelRevistas extends JPanel {
         String nmr = txtNmr.getText();
         String ano = txtAno.getText();
 
-        if(!isNumeric(vol) || !isNumeric(nmr) || !isNumeric(ano) )
+        if(!FunctionHelper.isNumeric(vol) || !FunctionHelper.isNumeric(nmr) || !FunctionHelper.isNumeric(ano) )
         {
             JOptionPane.showMessageDialog(mainFrame,"Tanto \"Vol.\", \"Nmr.\" e \"Ano\" devem ser numéricos.");
         }
         else if (!Objects.equals(titulo, "") && !Objects.equals(org, "") &&!Objects.equals(vol, "")
-                &&!Objects.equals(nmr, "") &&!Objects.equals(ano, "") && isNumeric(ano) && isNumeric(vol) && isNumeric(nmr)  )
+                &&!Objects.equals(nmr, "") &&!Objects.equals(ano, "") && FunctionHelper.isNumeric(ano) &&
+                FunctionHelper.isNumeric(vol) && FunctionHelper.isNumeric(nmr)  )
         {
             Revista revistaCriada = new Revista(titulo, ano, org, vol, nmr);
             listaObras.add(revistaCriada);
@@ -108,8 +109,5 @@ public class PainelRevistas extends JPanel {
         }
     }
 
-    private boolean isNumeric(String str){
-        return str.matches("\\d+");
-    }
 
 }
