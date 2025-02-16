@@ -10,7 +10,7 @@ Este projeto utiliza a a interface gráfica Swing para tornar a interação mais
 ## Motivação
 Esse é um trabalho introdutório na área de Princípios Padrões de Projetos; seu intuito é a apresentação do Swing, uma primeira experiência com interface gráfica.
 
-Quando integrada com as tecnologias do Java e Collections API (para manipulação de listas) buscasse um projeto cada vez mais completo e capaz de entregar uma boa experiência ao usuário.
+Quando integrada com as tecnologias do Java e Collections API (para manipulação de listas) busca-se um projeto cada vez mais completo e capaz de entregar uma boa experiência ao usuário. Sendo empregados os Padrões DRY e SOLID a cada atualizaçãoo
 
 ## Como Rodar
 
