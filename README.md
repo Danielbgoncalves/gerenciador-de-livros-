@@ -1,4 +1,4 @@
-# Gerenciador de Obras
+# Gerenciador de Obras ![imagem de um disco de vinil preto e dourado](assets/icon.png)
 
 Este projeto utiliza a a interface gráfica Swing para tornar a interação mais amigável, nele é possível adicionar livros, revistas e vídeos e uma lista de obras, bem como visualizar toda a lista com uma descrição unitária.
 
@@ -21,3 +21,5 @@ Quando integrada com as tecnologias do Java e Collections API (para manipulaçã
 2. Abra o projeto em uma IDE, foi utilizada a Intellij IDEA
 
 3. Compile e execute a classe Main.java
+
+
